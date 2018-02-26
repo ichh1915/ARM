@@ -4,19 +4,21 @@
 How will (or might) your code contribute to the group deliverable? What have you done to ensure interfaces etc will be compatible? What are your interfaces (enough information for your module to be used by someone else not in your team. Assessment here is based on best efforts while allowing independent development, not whether the code is actually useful. Typical length 1/4 page.
 
 * To ensure the interface is compatible during the group deliverable:
-  * The program have the following high level interface:
+The program have the following high level interface:
     * `xxParse:DataPath->LineData->Result<Parse<Instr>,string> option`
     * `xxExecution:DataPath->Parse<Instr>->DataPath`
-  * The following functions are compatible with other members' module and can be easily used little modification:
-    * Function | description
-  ------------ | -------------
-  `tokenize:string->TokenList` | Tokenize a string of all operands
-  `flexOp2:Datapath->FlexOp2->uint32` | Calculate the flexible second operand as `uint32`
-  `Op2SetCFlag:Datapath->FlexOp2->bool option` |  Parse the `C flag` update status during the calculation of the flexible Op2
-  `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
+    
+* The following functions are compatible with other members' module and can be easily used little modification:
+  
+Function | description
+------------ | -------------
+`tokenize:string->TokenList` | Tokenize a string of all operands
+`flexOp2:Datapath->FlexOp2->uint32` | Calculate the flexible second operand as `uint32`
+`Op2SetCFlag:Datapath->FlexOp2->bool option` |  Parse the `C flag` update status during the calculation of the flexible Op2
+`checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
   
     
-  
+
 
 
 
@@ -78,8 +80,6 @@ F# Program files under VisualTest:
 * `Visual.fs` Drive the Visual command-line program, implementing parallel opration and cacheing
 * `VTest.fs` Tests are the framework itself, and some sample assember tests
 * `VProgram.fs` Top-level code
-
-
 
 
 
