@@ -2,14 +2,15 @@
 
 ## How will you code contribute to the group:  1/4 page
 How will (or might) your code contribute to the group deliverable? What have you done to ensure interfaces etc will be compatible? What are your interfaces (enough information for your module to be used by someone else not in your team. Assessment here is based on best efforts while allowing independent development, not whether the code is actually useful. Typical length 1/4 page.
-* The interface is shown as below:
-![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
 
 * To ensure the interface is compatible during the group deliverable:
-The program have the following high level interface:
+The program have the Parse and Execution as two main high level function and the have the interface below:
     * `Parse:DataPath->LineData->Result<Parse<Instr>,string> option`
     * `Execution:DataPath->Parse<Instr>->DataPath`
     
+* The interface is shown as below:
+![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
+
 * The following functions are compatible with other members' module and can be easily used little modification:
   
 Function | description
@@ -20,9 +21,6 @@ Function | description
 `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
   
     
-
-
-
 
 
 ## What is the Specification of your code:  1/2 pages
@@ -87,4 +85,3 @@ F# Program files under VisualTest:
 
 
 
-![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
