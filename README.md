@@ -8,7 +8,7 @@ The program have Parse and Execution as the main high-level function which have 
     
 * The overall interface is shown in the flow chart below:
 
-![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
+![Diagram](https://github.com/ichh1915/ARM/blob/master/flowchart.png)
 
 * The following functions are compatible with other group members' module and can be easily adopted with little modification:
   
