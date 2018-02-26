@@ -2,6 +2,8 @@
 
 ## How will you code contribute to the group:  1/4 page
 How will (or might) your code contribute to the group deliverable? What have you done to ensure interfaces etc will be compatible? What are your interfaces (enough information for your module to be used by someone else not in your team. Assessment here is based on best efforts while allowing independent development, not whether the code is actually useful. Typical length 1/4 page.
+* The interface is shown as below:
+![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
 
 * To ensure the interface is compatible during the group deliverable:
 The program have the following high level interface:
