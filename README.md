@@ -1,7 +1,8 @@
 # HLP Project  
-### by Hao Hao(hh1915)
+## Hao Hao(hh1915)
 
 ## 1.Compatibility and Contribution to the Group
+
 * To ensure the interface is compatible during the group deliverable:
 The program have Parse and Execution as the main high-level function which have the interface below:
     * `Parse:DataPath->LineData->Result<Parse<Instr>,string> option`
@@ -19,7 +20,6 @@ Function | description
 `flexOp2:Datapath->FlexOp2->uint32` | Calculate the flexible second operand as `uint32`
 `Op2SetCFlag:Datapath->FlexOp2->bool option` |  Parse the `C flag` update status during the calculation of the flexible Op2
 `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
-  
     
 ## 2.Code Specification
 ### 2.1 Functionalities:
@@ -40,19 +40,22 @@ Operations | Syntax
   
   * `Bitwise Operations` & `mov/mvn` & `tst/teq`:The `C flag` can be updated during the calculation of the `FlexOperand2`. `N and C` are updated according to the result.
   
-### 2.2 Directories
+### 2.2 Directories of main functions:
 #### `TokenizeOperands.fs`
-* Tokenize and parse the operand string:
+* `Op2SetCFlag: DataPath->FlexOp2->bool option`
+* `FlexOp2: DataPath->FlexOp2->uint32`
+* `tokenize: string->token List`
 
 ####  `SFT.fs` 
-* `CheckCond` : `DataPath->Condition->bool` which is compatible for all conditional operations.
-* `ShiftExecute`: `DataPath->Parse<Instr>->DataPath`
+* `CheckCond: DataPath->Condition->bool` 
+* `ShiftExecute: DataPath->Parse<Instr>->DataPath`
+* `updateFlRegs: DataPath->ShiftCode) (rdest:RName) (op1:uint32) (op2:uint32) (setF:bool) (result:uint32):DataPath`
 
 #### `BIT.fs` 
-* `BitwiseExecute`: `DataPath->Parse<Instr>->DataPath`
+* `BitwiseExecute: DataPath->Parse<Instr>->DataPath`
 
 ####  `TST.fs` 
-* `TestExecute`: `DataPath->Parse<Instr>->DataPath`
+* `TestExecute: DataPath->Parse<Instr>->DataPath`
 
 ## 3.Test Plan
 The Tests are desgined as unit tests with randomised initail states
