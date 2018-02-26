@@ -4,8 +4,9 @@
 ## 1.Compatibility and Contribution to the Group
 
 * To ensure the interface is compatible during the group deliverable:
-The program have Parse and Execution as the main high-level function which have the interface below:
-    * `Parse:DataPath->LineData->Result<Parse<Instr>,string> option`
+The program have three main high-level function which have their interfaces below:
+    * `ParseOperands:DataPath->Token List-><self-define operand type>`
+    * `ParseInstr:DataPath->LineData->Result<Parse<Instr>,string> option`
     * `Execution:DataPath->Parse<Instr>->DataPath`
     
 * The overall interface is shown in the flow chart below:
