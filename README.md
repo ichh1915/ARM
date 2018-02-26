@@ -9,6 +9,7 @@ The program have the Parse and Execution as two main high level function and the
     * `Execution:DataPath->Parse<Instr>->DataPath`
     
 * The interface is shown as below:
+
 ![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
 
 * The following functions are compatible with other group members' module and can be easily used with little modification:
@@ -36,14 +37,15 @@ Operations | Syntax
 `MOV,NVN` | `op{S}{cond} Rd, FlexOperand2`
 `TST,TEQ` |`op{cond} Rn, FlexOperand2`
 
-* For `Rs`, only the least significant `byte` is used and can be in the range of `0-255`.
-* For `#n`, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
+* For `Rs` during shift operation, only the least significant `byte` is used and can be in the range of `0-255`.
+* For `#n` shift operation, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
 * The immediate literals are tested to be creatable by rotating a 8-bit number right within a 32-bit word.
 * Updating Flags:
-  * The `C flag` can be updated during the calculation of the `FlexOperand2`.
+  * `Shift Operations`:The `C flag` is updated to the last bit shifted out, except when the shift length is 0. `N and C` are updated according to the result.
   
-
-
+  * `Bitwise Operations` & `mov/mvn` & `tst/teq`:The `C flag` can be updated during the calculation of the `FlexOperand2`. `N and C` are updated according to the result.
+  
+  
 
 
 * Features:
