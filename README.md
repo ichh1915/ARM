@@ -1,4 +1,4 @@
-# HLP ARM Assembly Project: Hao Hao(01063260)
+# HLP ARM Assembly Project: by Hao Hao(01063260)
 
 ## How will you code contribute to the group:  1/4 page
 How will (or might) your code contribute to the group deliverable? What have you done to ensure interfaces etc will be compatible? What are your interfaces (enough information for your module to be used by someone else not in your team. Assessment here is based on best efforts while allowing independent development, not whether the code is actually useful. Typical length 1/4 page.
@@ -11,7 +11,7 @@ The program have the Parse and Execution as two main high level function and the
 * The interface is shown as below:
 ![Diagram](https://github.com/ichh1915/ARM/blob/master/FlowChart.png)
 
-* The following functions are compatible with other members' module and can be easily used little modification:
+* The following functions are compatible with other group members' module and can be easily used with little modification:
   
 Function | description
 ------------ | -------------
@@ -21,8 +21,6 @@ Function | description
 `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
   
     
-
-
 ## What is the Specification of your code:  1/2 pages
 What is the specification of your code? Detail differences from VisUAL (if doing standard project), and reasons for them. Detail any areas where spec was initially unclear and has been clarified. Typical length 1/2 page + Tables.
 Your markdown file can refer to comments in code, or the code itself, for details of normal functionality.
@@ -39,9 +37,13 @@ Operations | Syntax
 `TST,TEQ` |`op{cond} Rn, FlexOperand2`
 
 * For `Rs`, only the least significant `byte` is used and can be in the range of `0-255`.
-* For `#n`, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the result is the elimination of redundent number of shift(`#n`)
+* For `#n`, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
 * The immediate literals are tested to be creatable by rotating a 8-bit number right within a 32-bit word.
-* The `C flag` can be updated during the calculation of the `FlexOperand2`.
+* Updating Flags:
+  * The `C flag` can be updated during the calculation of the `FlexOperand2`.
+  
+
+
 
 
 * Features:
