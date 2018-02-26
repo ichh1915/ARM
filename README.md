@@ -1,4 +1,4 @@
-# HLP ARM Assembly Project: by Hao Hao(01063260)
+# HLP Project: by Hao Hao(01063260)
 
 ## How will you code contribute to the group:  1/4 page
 How will (or might) your code contribute to the group deliverable? What have you done to ensure interfaces etc will be compatible? What are your interfaces (enough information for your module to be used by someone else not in your team. Assessment here is based on best efforts while allowing independent development, not whether the code is actually useful. Typical length 1/4 page.
@@ -37,8 +37,9 @@ Operations | Syntax
 `MOV,NVN` | `op{S}{cond} Rd, FlexOperand2`
 `TST,TEQ` |`op{cond} Rn, FlexOperand2`
 
-* For `Rs` during shift operation, only the least significant `byte` is used and can be in the range of `0-255`.
-* For `#n` shift operation, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
+* Flexible Second Operand(`FlexOperand2`) is calculated as `uint32`, before being parsed to parse<Instr>;`SetC` is parsed as `bool option` representing the `C flag` update status when calculating `FlexOperand2`.
+* For `Rs` during shift operations, only the least significant `byte` is used and can be in the range of `0-255`.
+* For `#n` during shift operations, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
 * The immediate literals are tested to be creatable by rotating a 8-bit number right within a 32-bit word.
 * Updating Flags:
   * `Shift Operations`:The `C flag` is updated to the last bit shifted out, except when the shift length is 0. `N and C` are updated according to the result.
@@ -50,14 +51,6 @@ Operations | Syntax
 
 * Features:
 #### `TokenizeOperands.fs` -Tokenize and parse the operand string:
-   * For `bitwise logic` operations and `mov/mvn` with the syntax:`op{S}{cond} Rd, Rn, Operand2`, the flexible second operand(`Operand2`) is calculated and parsed as `uint32`. Also, the `Flag C` update status resulted from shift in operand2 is parsed.
-   * For the shift operations with the following syntax:
-      `op{S}{cond} Rd, Rm, Rs`,
-      `op{S}{cond} Rd, Rm, #n`  and
-      `RRX{S}{cond} Rd, Rm`.
-     For `Rs`, only the least significant `byte` is used and can be in the range of 0-255.
-     For `#n`, only the least siginificant `5-bits` are used and can be in the range of 0-31, this feature is not implimented in VisUAL, the dicision is made to elimilate redundent number of shift(`#n`)
-   * The immediate literals are tested to be creatable by rotating a 8-bit number right within a 32-bit word.
 
 ####  `SFT.fs` -
 * `CheckCond` : `DataPath`->`Condition`->`bool` which is compatible for all conditional operations.
