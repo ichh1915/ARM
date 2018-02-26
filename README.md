@@ -1,6 +1,7 @@
-# HLP Project:  by Hao Hao(hh1915)
+# HLP Project  
+### by Hao Hao(hh1915)
 
-## Compatibility and Contribution to the Group
+## 1.Compatibility and Contribution to the Group
 * To ensure the interface is compatible during the group deliverable:
 The program have Parse and Execution as the main high-level function which have the interface below:
     * `Parse:DataPath->LineData->Result<Parse<Instr>,string> option`
@@ -20,8 +21,8 @@ Function | description
 `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
   
     
-## What is the Specification of your code:  1/2 pages
-* Functionalities:
+## 2.Code Specification
+### 2.1 Functionalities:
 
 Operations | Syntax
 ------------ | -------------
@@ -39,24 +40,21 @@ Operations | Syntax
   
   * `Bitwise Operations` & `mov/mvn` & `tst/teq`:The `C flag` can be updated during the calculation of the `FlexOperand2`. `N and C` are updated according to the result.
   
-  
-
-
-* Directories:
+### 2.2 Directories
 #### `TokenizeOperands.fs`
 * Tokenize and parse the operand string:
 
 ####  `SFT.fs` 
-* `CheckCond` : `DataPath`->`Condition`->`bool` which is compatible for all conditional operations.
+* `CheckCond` : `DataPath->Condition->bool` which is compatible for all conditional operations.
 * `ShiftExecute`: `DataPath->Parse<Instr>->DataPath`
 
 #### `BIT.fs` 
 * `BitwiseExecute`: `DataPath->Parse<Instr>->DataPath`
 
-####  `TST.fs` -
+####  `TST.fs` 
 * `TestExecute`: `DataPath->Parse<Instr>->DataPath`
 
-## Test Plan:  1/2 page + table
+## 3.Test Plan
 The Tests are desgined as unit tests with randomised initail states
 * The specific Test method is as following:
   * Generate random initial R0-R14 register contents;
@@ -71,10 +69,10 @@ The four types of operations are represented as symbols:
 
 Operations | Symbol
 ------------ | -------------
-`LSL,LSR,ASR,ROR,RRX`| SFT
-`AND,ORR,BIC,EOR` | BIT
-`MOV,NVN` | MOV
-`TST,TEQ` | TST
+`LSL,LSR,ASR,ROR,RRX`| `SFT`
+`AND,ORR,BIC,EOR` | `BIT`
+`MOV,NVN` | `MOV`
+`TST,TEQ` | `TST`
 
 The specific unit tests are as following:
 
@@ -84,7 +82,7 @@ Test assembly line | Status
 `SFT{S} Rd, Rn, #n` with `#n<32` | `Success`
 `SFT{S} Rd, Rn, Rs` | `Success`
 `RRX{S} Rd, Rm` | `Success`
-`SFT{S} Rd, Rn, Rs in the cases Rd=Rn` | `Success`
+`SFT{S} Rd, Rn, Rs` in the cases Rd=Rn | `Success` Corner Case
 `BIT{S} Rd, Rn, #n` | `Success`
 `BIT{S} Rd, Rn, Rs` | `Success`
 `BIT{S} Rd, Rn, Rs, SHIFT, #n` | `Success`
