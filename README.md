@@ -76,7 +76,7 @@ The Tests are desgined as unit tests with randomised initail states
   * Initialise assembly instructions covering all realised operations and operation modes;
   * Feed the above initial states as DataPath and LineData in to the F# `someExecution:DataPath->Parse<Instr>->DataPath`;
   * Input the initial states as Params and string to `RunVisualWithFlagsOut->Params->string->Flags->VisOutput`;
-  * Test the output states for F# assembler and visUAL, namingly the updated register contents and the updated flags are **equal** .
+  * Test the output states for `F# assembler` and `visUAL` are **equal**, namingly the updated `register contents` and the updated `flags` are **equal** .
 
 The four types of operations are represented as symbols:
 
