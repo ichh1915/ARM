@@ -42,15 +42,17 @@ Operations | Syntax
   
 ### 2.2 Directories of main functions:
 #### `TokenizeOperands.fs`
-* `tokenize: string->token List`
-* `FlexOp2: DataPath->FlexOp2->uint32`
-* `Op2SetCFlag: DataPath->FlexOp2->bool option`
+* `ParsesomeOperationOps`: parse `Token List` to `self-defined operand type` with additional input of `DataPath` 
+* `tokenize: string->token List`: tokenize a `string` of all operands to `token List`
+* `FlexOp2: DataPath->FlexOp2->uint32`: calculate the flexible second operand as `uint32`
+* `Op2SetCFlag: DataPath->FlexOp2->bool option`: return the `C flag` status updated when calculating `FlexOp2`
+
 
 ####  `SFT.fs`  
-* `ShiftExecute: DataPath->Parse<Instr>->DataPath`:execute shift operation and update the `DataPath`
-* `updateFlRegs`:update flag and register contents are an operation
-* `CheckCond: DataPath->Condition->bool`:check whether the flags matches the condition for conditional operation
-* `SFparse`:parse `LineData` to `Result<Parse<Instr>,string> option` with additional input of `DataPath` 
+* `ShiftExecute: DataPath->Parse<Instr>->DataPath`: execute shift operation and update the `DataPath`
+* `updateFlRegs`: update flag and register contents are an operation
+* `CheckCond: DataPath->Condition->bool`: check whether the flags matches the condition for conditional operation
+* `SFparse`: parse `LineData` to `Result<Parse<Instr>,string> option` with additional input of `DataPath` 
 #### `BIT.fs` 
 * `BitwiseExecute: DataPath->Parse<Instr>->DataPath`
 * `updateFlRegs`
@@ -67,8 +69,8 @@ Operations | Syntax
 ## 3.Test Plan
 The Tests are desgined as unit tests with randomised initail states
 * The specific Test method is as following:
-  * Generate random initial R0-R14 register contents;
-  * Generate random initial NZCV Flags;
+  * Generate random initial `R0-R14` register contents;
+  * Generate random initial `NZCV` Flags;
     * Error when N and V are noth true.
   * Initialise assembly instructions covering all realised operations and operation modes;
   * Feed the above initial states as DataPath and LineData in to the F# `someExecution:DataPath->Parse<Instr>->DataPath`;
