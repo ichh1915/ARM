@@ -85,9 +85,4 @@ F# Program files under VisualTest:
 
 
 
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-
+![Alt](Untitled Diagram.xml).
