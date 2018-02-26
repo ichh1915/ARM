@@ -30,7 +30,8 @@ Your markdown file should contain a precise description of how much functionalit
 A precise specification document would be very long: your document should only detail issues not obvious from the initial spec that needed to be resolved. An example of this for the default project would be where upper/lower case is significant, and where not.
 
 * Functionalities:
-* Operations | Syntax
+
+Operations | Syntax
 ------------ | -------------
 `LSL,LSR,ASR,ROR,RRX` | `op{S}{cond} Rd, Rn, Rs` or  `op{S}{cond} Rd, Rm, #n` or `RRX{S}{cond} Rd, Rm`
 `AND,ORR,BIC,EOR` | `op{S}{cond} Rd, Rn, FlexOperand2`
