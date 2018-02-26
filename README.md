@@ -42,20 +42,27 @@ Operations | Syntax
   
 ### 2.2 Directories of main functions:
 #### `TokenizeOperands.fs`
-* `Op2SetCFlag: DataPath->FlexOp2->bool option`
-* `FlexOp2: DataPath->FlexOp2->uint32`
 * `tokenize: string->token List`
+* `FlexOp2: DataPath->FlexOp2->uint32`
+* `Op2SetCFlag: DataPath->FlexOp2->bool option`
 
-####  `SFT.fs` 
-* `CheckCond: DataPath->Condition->bool` 
-* `ShiftExecute: DataPath->Parse<Instr>->DataPath`
-* `updateFlRegs: DataPath->ShiftCode) (rdest:RName) (op1:uint32) (op2:uint32) (setF:bool) (result:uint32):DataPath`
-
+####  `SFT.fs`  
+* `ShiftExecute: DataPath->Parse<Instr>->DataPath`:execute shift operation and update the `DataPath`
+* `updateFlRegs`:update flag and register contents are an operation
+* `CheckCond: DataPath->Condition->bool`:check whether the flags matches the condition for conditional operation
+* `SFparse`:parse `LineData` to `Result<Parse<Instr>,string> option` with additional input of `DataPath` 
 #### `BIT.fs` 
 * `BitwiseExecute: DataPath->Parse<Instr>->DataPath`
-
+* `updateFlRegs`
+* `BTparse`
 ####  `TST.fs` 
 * `TestExecute: DataPath->Parse<Instr>->DataPath`
+* `updateFlRegs`
+* `TTparse`
+####  `MOV.fs` 
+* `MovsExecute: DataPath->Parse<Instr>->DataPath`
+* `updateFlRegs`
+* `MVparse`
 
 ## 3.Test Plan
 The Tests are desgined as unit tests with randomised initail states
