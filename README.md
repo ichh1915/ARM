@@ -4,7 +4,7 @@
 ## 1.Compatibility and Contribution to the Group
 
 * To ensure the interface is compatible during the group deliverable:
-The program have three main high-level function which have their interfaces below:
+The program have three main high-level function with their interfaces shown as below:
     * `ParseOperands:DataPath->Token List-><self-define operand type>`
     * `ParseInstr:DataPath->LineData->Result<Parse<Instr>,string> option`
     * `Execution:DataPath->Parse<Instr>->DataPath`
@@ -13,9 +13,9 @@ The program have three main high-level function which have their interfaces belo
 
 ![Diagram](https://github.com/ichh1915/ARM/blob/master/flowchart.png)
 
-* The following functions are compatible with other group members' module and can be easily adopted with little modification:
+* The following functions are compatible with other group members' module and can be conveniently adopted with little modification:
   
-Function | description
+Function | Description
 ------------ | -------------
 `tokenize:string->TokenList` | Tokenize a string of all operands
 `flexOp2:Datapath->FlexOp2->uint32` | Calculate the flexible second operand as `uint32`
@@ -68,14 +68,14 @@ Operations | Syntax
 * `MVparse`
 
 ## 3.Test Plan
-The Tests are desgined as unit tests with randomised initail states
+**The Tests are desgined as unit tests with randomized initail states**
 * The specific Test method is as following:
   * Generate random initial `R0-R14` register contents;
   * Generate random initial `NZCV` Flags;
-    * Error when N and V are noth true.
+    * fail with `Error` when N and V are noth true.
   * Initialise assembly instructions covering all realised operations and operation modes;
-  * Feed the above initial states as DataPath and LineData in to the F# `someExecution:DataPath->Parse<Instr>->DataPath`;
-  * Input the initial states as Params and string to `RunVisualWithFlagsOut->Params->string->Flags->VisOutput`;
+  * Feed the above initial states as DataPath and LineData in to F#'s `someExecution:DataPath->Parse<Instr>->DataPath`;
+  * Input the initial states as Params and string to visUAL `RunVisualWithFlagsOut->Params->string->Flags->VisOutput`;
   * Test the output states for `F# assembler` and `visUAL` are **equal**, namingly the updated `register contents` and the updated `flags` are **equal** .
 
 The four types of operations are represented as symbols:
@@ -87,15 +87,15 @@ Operations | Symbol
 `MOV,NVN` | `MOV`
 `TST,TEQ` | `TST`
 
-The specific unit tests are as following:
+The specific unit tests and their status are as following:
 
 Test assembly line | Status
 ------------ | -------------
-`SFT{S} Rd, Rn, #n` with `#n>=32` | Expected to `Fail`,due to only `literial input &&& 0x1F` are used for shift operations,visUAL allow number of shift to be `>32`
+`SFT{S} Rd, Rn, #n` with `#n>=32` | Expected to `Fail`,due to only `n modulo 32` are used for shift operations in the F# program, whereas visUAL allow number of shift to be `>32`
 `SFT{S} Rd, Rn, #n` with `#n<32` | `Success`
 `SFT{S} Rd, Rn, Rs` | `Success`
 `RRX{S} Rd, Rm` | `Success`
-`SFT{S} Rd, Rn, Rs` in the cases Rd=Rn | `Success` Corner Case
+`SFT{S} Rd, Rn, Rs` in the cases `Rd=Rn` | `Success` corner case
 `BIT{S} Rd, Rn, #n` | `Success`
 `BIT{S} Rd, Rn, Rs` | `Success`
 `BIT{S} Rd, Rn, Rs, SHIFT, #n` | `Success`
