@@ -51,7 +51,7 @@ Operations | Syntax
 
 ####  `SFT.fs`  
 * `ShiftExecute: DataPath->Parse<Instr>->DataPath`: execute shift operation and update the `DataPath`
-* `updateFlRegs`: update flag and register contents are an operation
+* `updateFlRegs`: update flag and register contents after an operation
 * `CheckCond: DataPath->Condition->bool`: check whether the flags matches the condition for conditional operation
 * `SFparse`: parse `LineData` to `Result<Parse<Instr>,string> option` with additional input of `DataPath` 
 #### `BIT.fs` 
