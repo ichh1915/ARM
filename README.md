@@ -68,7 +68,7 @@ Operations | Syntax
 * `MVparse`
 
 ## 3.Test Plan
-**The Tests are desgined as unit tests with randomized initail states**
+**The Tests are desgined as unit tests with randomized initail states under `VTest.fs`**
 * The specific Test method is as following:
   * Generate random initial `R0-R14` register contents;
   * Generate random initial `NZCV` Flags;
