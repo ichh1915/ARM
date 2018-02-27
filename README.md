@@ -32,7 +32,7 @@ Operations | Syntax
 `MOV,NVN` | `op{S}{cond} Rd, FlexOperand2`
 `TST,TEQ` |`op{cond} Rn, FlexOperand2`
 
-* Flexible Second Operand(`FlexOperand2`) is calculated as `uint32`, before being parsed to parse<Instr>;`SetC` is parsed as `bool option` representing the `C flag` update status when calculating `FlexOperand2`.
+* Flexible Second Operand(`FlexOperand2`) is calculated as `uint32`, before being parsed to `parse<Instr>` ;`SetC` is parsed as `bool option` representing the `C flag` update status when calculating `FlexOperand2`.
 * For `Rs` during shift operations, only the least significant `byte` is used and can be in the range of `0-255`.
 * For `#n` during shift operations, only the least siginificant `5-bits` are used and can be in the range of `0-31`, this feature is not implimented in VisUAL, the reasoning is to eliminate redundant number of shift(`#n`).
 * The immediate literals are tested to be creatable by rotating a 8-bit number right within a 32-bit word.
