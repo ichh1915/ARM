@@ -9,7 +9,7 @@ Added following useful functions
 1. `Op2SetCFlag:Datapath->FlexOp2->bool option` | Parse the `C flag` update status during the calculation of the flexible Op2
 2. `checkCond:DataPath->Condition->bool` | Check whether the flags status match the condition during the conditional operation
 
-Updated parsing for shift, bitwise logic, tst and mov to fit the new interface. Added syntax error checking during parsing. 
+Updated parsing for `shift`, `bitwise logic`, `tst` and `mov` to fit the new interface. Added syntax error checking during parsing. 
     
 
 
