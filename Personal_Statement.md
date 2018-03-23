@@ -3,7 +3,7 @@
 
 ## Work and contribution during the group phase 
 
-Implemented DCD, DCB, FILL, EQU, END instructions which was not done during the individual phase. Due to the memory 
+Implemented DCD, DCB, FILL, EQU, END instructions which was not done during the individual phase. Due to the memory  
 
 Added following global 
 `flexOp2:Datapath->FlexOp2->uint32` | Calculate the flexible second operand as `uint32`
