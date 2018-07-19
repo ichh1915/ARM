@@ -72,7 +72,7 @@ Operations | Syntax
 * The specific Test method is as following:
   * Generate random initial `R0-R14` register contents;
   * Generate random initial `NZCV` Flags;
-    * fail with `Error` when N and V are noth true.
+    * fail with `Error` when N and V are both true.
   * Initialise assembly instructions covering all realised operations and operation modes;
   * Feed the above initial states as DataPath and LineData in to F#'s `someExecution:DataPath->Parse<Instr>->DataPath`;
   * Input the initial states as Params and string to visUAL `RunVisualWithFlagsOut->Params->string->Flags->VisOutput`;
