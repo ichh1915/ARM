@@ -1,4 +1,4 @@
-# HLP Project
+# High Level Programming Project: Assembly Language assmebler and emulator with testing framework
 ## Hao Hao(hh1915)
 
 ## 1.Compatibility and Contribution to the Group
