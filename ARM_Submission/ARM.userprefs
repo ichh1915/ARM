@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{020443CA-78FF-4373-9304-C7EFCE85723B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ARM/VTest.fs">
+    <Files>
+      <File FileName="ARM/CommonData.fs" Line="3" Column="67" />
+      <File FileName="ARM/CommonLex.fs" Line="2" Column="74" />
+      <File FileName="ARM/TokenizeOperands.fs" Line="50" Column="69" />
+      <File FileName="ARM/SFT.fs" Line="25" Column="1" />
+      <File FileName="ARM/BIT.fs" Line="23" Column="1" />
+      <File FileName="ARM/TST.fs" Line="20" Column="5" />
+      <File FileName="ARM/MOV.fs" Line="22" Column="1" />
+      <File FileName="ARM/VCommon.fs" Line="25" Column="8" />
+      <File FileName="ARM/VData.fs" Line="97" Column="1" />
+      <File FileName="ARM/VLog.fs" Line="8" Column="58" />
+      <File FileName="ARM/Visual.fs" Line="110" Column="30" />
+      <File FileName="ARM/VProgram.fs" Line="8" Column="16" />
+      <File FileName="ARM/VTest.fs" Line="270" Column="40" />
+      <File FileName="ARM/EEExtensions.fs" Line="13" Column="5" />
+      <File FileName="ARM/Script.fsx" Line="2" Column="12" />
+      <File FileName="../High-Level-Programming-master/FinalProject/Code/src/LizhangInstructions.fs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ARM PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

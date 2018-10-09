@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+<ItemGroup>
+
+<None Remove="Tests.fsx" />
+<None Remove="Script.fsx" />
+</ItemGroup>
+
+
+<ItemGroup>
+  <Compile Remove="FlexOp2.fs" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonData.fs" />
+    <Compile Include="CommonLex.fs" />
+    <Compile Include="EEExtensions.fs" />
+    <Compile Include="TokenizeOperands.fs" />
+    <Compile Include="SFT.fs" />
+    <Compile Include="MOV.fs" />
+    <Compile Include="BIT.fs" />
+    <Compile Include="TST.fs" />
+    <Compile Include="VCommon.fs" />
+    <Compile Include="VData.fs" />
+    <Compile Include="VLog.fs" />
+    <Compile Include="Visual.fs" />
+    <Compile Include="VTest.fs" />
+    <Compile Include="VProgram.fs" />
+    <PackageReference Include="Expecto.FsCheck" Version="5.1.2" />
+    <PackageReference Include="Expecto" Version="5.1.2" />
+  </ItemGroup>
+</Project>

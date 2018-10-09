@@ -1,0 +1,16 @@
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/bin/Debug/netcoreapp2.0/ARM.deps.json
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/bin/Debug/netcoreapp2.0/ARM.runtimeconfig.json
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/bin/Debug/netcoreapp2.0/ARM.runtimeconfig.dev.json
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/bin/Debug/netcoreapp2.0/ARM.dll
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/bin/Debug/netcoreapp2.0/ARM.pdb
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/obj/Debug/netcoreapp2.0/ARM.fsprojResolveAssemblyReference.cache
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/obj/Debug/netcoreapp2.0/ARM.dll
+/Users/hh1915/Desktop/HLP_VS/ARM/ARM/obj/Debug/netcoreapp2.0/ARM.pdb
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/bin/Debug/netcoreapp2.0/ARM.deps.json
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/bin/Debug/netcoreapp2.0/ARM.runtimeconfig.json
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/bin/Debug/netcoreapp2.0/ARM.runtimeconfig.dev.json
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/bin/Debug/netcoreapp2.0/ARM.dll
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/bin/Debug/netcoreapp2.0/ARM.pdb
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/obj/Debug/netcoreapp2.0/ARM.fsprojResolveAssemblyReference.cache
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/obj/Debug/netcoreapp2.0/ARM.dll
+/Users/hh1915/Desktop/HLP_VS/ARM 2/ARM/obj/Debug/netcoreapp2.0/ARM.pdb
